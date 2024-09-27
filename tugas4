@@ -1,0 +1,22 @@
+program kalkulator;
+uses crt;
+var 
+hasil,n1,n2:real;
+pilih_aja:integer;
+begin
+    clrscr;
+    writeln('1.Penjumlahan'); 
+    writeln('2.Pengurangan'); 
+    writeln('3.Perkalian'); 
+    writeln('4.Pembagian');
+    write('Pilih Operator : '); readln(pilih_aja);
+    write('Masukin angka 1: '); readln(n1);
+    write('Masukin angka 2: '); readln(n2);
+case pilih_aja of
+    1 : hasil := n1 + n2;
+    2 : hasil := n1 - n2;
+    3 : hasil := n1 * n2; 
+    4 : hasil := n1 / n2; 
+end;
+    writeln('Hasil nya adalah : ',hasil:0:2);
+end.
